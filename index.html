@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - PERUMEC 2026</title>
+    <link rel="icon" type="image/x-icon" href="perumec.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #0b0f19;
+        }
+
+        .gradient-bg {
+            background-color: #0b0f19;
+            background-image: radial-gradient(circle at top right, rgba(99, 102, 241, 0.15), transparent 40%),
+                radial-gradient(circle at bottom left, rgba(45, 212, 191, 0.15), transparent 40%);
+        }
+    </style>
+</head>
+
+<body class="text-slate-200 min-h-screen gradient-bg flex flex-col justify-between relative z-0">
+
+    <!-- Particles Background -->
+    <div id="particles-js" class="fixed inset-0 -z-10 pointer-events-auto"></div>
+
+    <!-- Header / Navbar Minimalist -->
+    <header class="w-full max-w-4xl mx-auto px-6 py-6 flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+            <div class="w-3 h-3 bg-indigo-500 rounded-full animate-pulse"></div>
+            <span class="text-sm font-semibold tracking-widest text-indigo-400 uppercase">PERUMEC 2026</span>
+        </div>
+        <span class="text-xs text-slate-500 bg-slate-900/80 px-3 py-1 rounded-full border border-slate-850">Registro
+            Activo</span>
+    </header>
+
+    <!-- Main Content Container -->
+    <main
+        class="w-full max-w-4xl mx-auto px-4 md:px-6 py-4 flex-grow grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+
+        <!-- Left Column: Info & Media -->
+        <div class="space-y-6">
+            <div class="space-y-2">
+                <h1 class="text-3xl md:text-4xl font-bold text-white tracking-tight">
+                    Inscripción Rápida <br>
+                    <span
+                        class="bg-gradient-to-r from-indigo-400 via-purple-400 to-teal-400 bg-clip-text text-transparent">Congreso
+                        Nacional PERUMEC 2026</span>
+                </h1>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    Completa el formulario en menos de un minuto para registrar tus datos e interés en los próximos
+                    eventos y conferencias de ingeniería.
+                </p>
+            </div>
+
+            <!-- Video Embed Card (Responsive) -->
+            <div class="bg-slate-900/60 rounded-2xl p-2 border border-slate-800 shadow-xl overflow-hidden">
+                <div class="relative w-full aspect-video rounded-xl overflow-hidden bg-slate-950">
+                    <!-- Reemplaza el ID de YouTube 'dQw4w9WgXcQ' por el video promocional de PERUMEC -->
+                    <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/dRV89LykdlY"
+                        title="Video Promocional" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="p-3">
+                    <p class="text-xs font-medium text-slate-400">🎥 Video Informativo: Conoce más sobre la sede Cusco
+                        2026</p>
+                </div>
+            </div>
+
+            <!-- Image Feature/Banner -->
+            <div
+                class="bg-gradient-to-br from-indigo-950/40 to-slate-900/60 rounded-xl p-4 border border-slate-800/80 flex items-center space-x-4">
+                <div
+                    class="w-12 h-12 rounded-lg bg-indigo-500/10 flex items-center justify-center text-indigo-400 border border-indigo-500/20 flex-shrink-0">
+                    🌌
+                </div>
+                <div>
+                    <h4 class="text-sm font-semibold text-white">Conexión Instantánea</h4>
+                    <p class="text-xs text-slate-400 mt-0.5">Tus datos se sincronizan automáticamente con nuestra base
+                        de datos de interesados 2026 para enviarte informacion sobre los eventos.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column: Registration Form -->
+        <div
+            class="bg-slate-900/40 backdrop-blur-md rounded-2xl p-6 md:p-8 border border-slate-800 shadow-2xl relative">
+            <h2 class="text-xl font-semibold text-white mb-6 flex items-center gap-2">
+                <svg class="w-5 h-5 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z">
+                    </path>
+                </svg>
+                Formulario de Registro
+            </h2>
+
+            <!-- Form Start -->
+            <form id="registroForm" class="space-y-4">
+                <!-- Nombre y Apellido -->
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-medium text-slate-400 mb-1">Nombre</label>
+                        <input type="text" name="Nombre" required
+                            class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500 transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-slate-400 mb-1">Apellido</label>
+                        <input type="text" name="Apellido" required
+                            class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500 transition-colors">
+                    </div>
+                </div>
+
+                <!-- Universidad y Carrera -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-medium text-slate-400 mb-1">Universidad</label>
+                        <input type="text" name="Universidad" placeholder="Ej. UPN" required
+                            class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500 transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-slate-400 mb-1">Carrera</label>
+                        <input type="text" name="Carrera" placeholder="Ej. Ingeniería de Sistemas" required
+                            class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500 transition-colors">
+                    </div>
+                </div>
+
+                <!-- Ciclo, DNI y Celular -->
+                <div class="grid grid-cols-3 gap-3">
+                    <div class="col-span-1">
+                        <label class="block text-xs font-medium text-slate-400 mb-1">Ciclo</label>
+                        <select name="Ciclo" required
+                            class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-2 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500 transition-colors">
+                            <option value="">--</option>
+                            <option value="I">I</option>
+                            <option value="II">II</option>
+                            <option value="III">III</option>
+                            <option value="IV">IV</option>
+                            <option value="V">V</option>
+                            <option value="VI">VI</option>
+                            <option value="VII">VII</option>
+                            <option value="VIII">VIII</option>
+                            <option value="IX">IX</option>
+                            <option value="X">X</option>
+                            <option value="Egresado">Eg.</option>
+                        </select>
+                    </div>
+                    <div class="col-span-2">
+                        <label class="block text-xs font-medium text-slate-400 mb-1">DNI / Documento</label>
+                        <input type="text" name="DNI" pattern="[0-9]+" minlength="8" maxlength="12" required
+                            class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-3 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500 transition-colors">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 gap-4">
+                    <div>
+                        <label class="block text-xs font-medium text-slate-400 mb-1">Celular / WhatsApp</label>
+                        <input type="tel" name="Celular" placeholder="Ej. 987654321" required
+                            class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500 transition-colors">
+                    </div>
+                </div>
+
+                <!-- Correo Personal -->
+                <div>
+                    <label class="block text-xs font-medium text-slate-400 mb-1">Correo Personal</label>
+                    <input type="email" name="Correo Personal" placeholder="usuario@gmail.com" required
+                        class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500 transition-colors">
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" id="btnEnviar"
+                    class="w-full mt-2 bg-gradient-to-r from-indigo-500 to-teal-500 hover:from-indigo-600 hover:to-teal-600 text-white font-medium text-sm py-3 rounded-xl shadow-lg shadow-indigo-500/20 hover:shadow-indigo-500/30 transition-all transform active:scale-[0.98] flex items-center justify-center gap-2">
+                    <span id="btnTexto">Enviar Registro</span>
+                    <svg id="spinner" class="animate-spin h-4 w-4 text-white hidden" xmlns="http://www.w3.org/2000/svg"
+                        fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4">
+                        </circle>
+                        <path class="opacity-75" fill="currentColor"
+                            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+                        </path>
+                    </svg>
+                </button>
+            </form>
+
+            <!-- Success/Error Message Callouts -->
+            <div id="mensajeExito"
+                class="hidden mt-4 p-4 bg-teal-500/10 border border-teal-500/30 text-teal-400 text-xs rounded-xl text-center">
+                ✨ ¡Registro enviado con éxito! Los datos han sido sincronizados.
+            </div>
+            <div id="mensajeError"
+                class="hidden mt-4 p-4 bg-rose-500/10 border border-rose-500/30 text-rose-400 text-xs rounded-xl text-center">
+                ❌ Hubo un error al enviar. Por favor, inténtalo de nuevo.
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full text-center py-6 border-t border-slate-900 mt-8">
+        <p class="text-xs text-slate-600">&copy; 2026 Organizado por Embajadores UPN PERUMEC. Todos los derechos
+            reservados.</p>
+    </footer>
+
+    <!-- JavaScript Integration Script -->
+    <script>
+        const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxCFGn4kxjb47l-k-S7pqgALMQ9ryTyMIRvMnQThGD8pcnWeo58Y7vCLTXxYzImcCtC/exec";
+
+        const form = document.getElementById('registroForm');
+        const btnEnviar = document.getElementById('btnEnviar');
+        const btnTexto = document.getElementById('btnTexto');
+        const spinner = document.getElementById('spinner');
+        const msgExito = document.getElementById('mensajeExito');
+        const msgError = document.getElementById('mensajeError');
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Ocultar mensajes previos y activar loader
+            msgExito.classList.add('hidden');
+            msgError.classList.add('hidden');
+            btnEnviar.disabled = true;
+            btnTexto.textContent = "Procesando...";
+            spinner.classList.remove('hidden');
+
+            const formData = new FormData(form);
+
+            // Enviar usando fetch con método POST a la URL de Google Apps Script
+            fetch(WEB_APP_URL, {
+                method: 'POST',
+                body: formData,
+                mode: 'no-cors' // Crucial para evitar bloqueos CORS locales/GitHub Pages
+            })
+                .then(() => {
+                    // Como usamos no-cors, asumimos éxito si la promesa se resuelve sin fallar el network
+                    msgExito.classList.remove('hidden');
+                    form.reset();
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    msgError.classList.remove('hidden');
+                })
+                .finally(() => {
+                    btnEnviar.disabled = false;
+                    btnTexto.textContent = "Enviar Registro";
+                    spinner.classList.add('hidden');
+                });
+        });
+    </script>
+
+    <!-- Particles.js Library and Config -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
+                "color": { "value": ["#6366f1", "#2dd4bf", "#c084fc"] },
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.6, "random": true, "anim": { "enable": true, "speed": 1, "opacity_min": 0.1, "sync": false } },
+                "size": { "value": 4, "random": true, "anim": { "enable": true, "speed": 2, "size_min": 0.1, "sync": false } },
+                "line_linked": { "enable": true, "distance": 150, "color": "#6366f1", "opacity": 0.2, "width": 1 },
+                "move": { "enable": true, "speed": 1.5, "direction": "none", "random": true, "straight": false, "out_mode": "out", "bounce": false }
+            },
+            "interactivity": {
+                "detect_on": "window",
+                "events": { "onhover": { "enable": true, "mode": "repulse" }, "onclick": { "enable": true, "mode": "push" }, "resize": true },
+                "modes": {
+                    "repulse": { "distance": 100, "duration": 0.4 },
+                    "push": { "particles_nb": 4 }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+</body>
+
+</html>
